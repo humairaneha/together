@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_gallery">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.apptask.together.ui.home.HomeFragment"
+        android:label="Team Inbox"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.apptask.together.ui.gallery.TaskFragment"
+        android:label="@string/tasks"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.apptask.together.ui.slideshow.IdeaFragment"
+        android:label="Ideas"
+        tools:layout="@layout/fragment_idea" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.apptask.together.ui.Profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_findMember"
+        android:name="com.apptask.together.ui.FindTeamFragment"
+        android:label="Find Team Members"
+        tools:layout="@layout/fragment_find_team" />
+    <fragment
+        android:id="@+id/nav_coWorkers"
+        android:name="com.apptask.together.ui.CoWorkerListFragment"
+        android:label="Co-Workers List"
+        tools:layout="@layout/fragment_co_worker_list" />
+
+</navigation>

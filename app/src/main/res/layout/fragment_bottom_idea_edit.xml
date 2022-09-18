@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="false"
+    android:elevation="8dp"
+    android:paddingBottom="60dp"
+    tools:context=".Fragment.BottomIdeaInputFragment">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/toolbar_color"
+        android:editable="true"
+        android:ems="10"
+        android:hint="Tilte"
+        android:inputType="textShortMessage|text"
+        android:textColor="#0C0C0C"
+        android:textIsSelectable="true"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idea_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/toolbar_color"
+        android:clickable="false"
+        android:editable="true"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Idea"
+        android:inputType="textMultiLine"
+        android:textIsSelectable="false"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/toolbar_color"
+        android:drawableLeft="@drawable/ic_icons8_idea"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textColor="#FFFCFC"
+        android:textSize="16sp"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/idea_input"
+        app:layout_constraintStart_toEndOf="@+id/delete_btn"
+        app:layout_constraintTop_toBottomOf="@+id/idea_input" />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/toolbar_color"
+        android:text="Delete"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_btn"
+        app:layout_constraintEnd_toStartOf="@+id/add_btn"
+        app:layout_constraintStart_toStartOf="@+id/idea_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

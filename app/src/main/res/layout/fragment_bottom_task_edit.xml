@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#FFFCFC"
+
+
+    tools:context=".Fragment.BottomTaskInputFragment">
+
+
+    <EditText
+        android:id="@+id/task_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="640dp"
+        android:backgroundTint="@color/toolbar_color"
+        android:ems="10"
+        android:hint="Task"
+        android:inputType="textMultiLine|textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/date_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="563dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_icons8_planner__1_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/taskAddbtn"
+        app:layout_constraintStart_toStartOf="@+id/task_txt" />
+
+    <ImageButton
+        android:id="@+id/taskAddbtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="200dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_icons8_task__1_"
+        app:layout_constraintBottom_toBottomOf="@+id/date_btn"
+        app:layout_constraintEnd_toEndOf="@+id/task_txt"
+        app:layout_constraintStart_toEndOf="@+id/date_btn"
+        app:layout_constraintTop_toTopOf="@+id/date_btn" />
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/tomorrow_chip"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="5dp"
+        android:text="@string/tomorrow"
+        android:textSize="16sp"
+        app:chipIcon="@drawable/ic_icons8_planner__1_"
+        app:chipStartPadding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/next_week_chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/today_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/next_week_chip"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:elevation="5dp"
+        android:text="@string/next_week"
+        app:chipIcon="@drawable/ic_icons8_planner__1_"
+        app:chipStartPadding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tomorrow_chip"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tomorrow_chip"
+        app:layout_constraintTop_toBottomOf="@+id/tomorrow_chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/today_chip"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:elevation="5dp"
+        android:text="@string/today"
+        android:textSize="16sp"
+        app:chipIcon="@drawable/ic_icons8_planner__1_"
+        app:chipStartPadding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tomorrow_chip"
+        app:layout_constraintEnd_toEndOf="@+id/tomorrow_chip"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tomorrow_chip"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="112dp"
+        android:gravity="center"
+        android:text="Due Date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_txt" />
+
+    <CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="332dp"
+        android:layout_height="300dp"
+        android:selectedDateVerticalBar="@color/primary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <ImageButton
+        android:id="@+id/delete_img_btn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginEnd="7dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_icons8_trash_can__1_"
+        app:layout_constraintBottom_toBottomOf="@+id/taskAddbtn"
+        app:layout_constraintEnd_toStartOf="@+id/taskAddbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/date_btn"
+        app:layout_constraintTop_toBottomOf="@+id/task_txt" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        android:buttonTint="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="@+id/date_btn"
+        app:layout_constraintEnd_toStartOf="@+id/delete_img_btn"
+        app:layout_constraintStart_toEndOf="@+id/date_btn"
+        app:layout_constraintTop_toTopOf="@+id/date_btn" />
+
+    <!--    <androidx.constraintlayout.widget.Group-->
+    <!--        android:id="@+id/calendar_group"-->
+    <!--        android:layout_width="280dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:constraint_referenced_ids="calendar_view,next_week_chip,tomorrow_chip,today_chip,textView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
