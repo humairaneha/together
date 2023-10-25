@@ -1,3 +1,4 @@
+
 # together
 1. Project's Title: Together - An android application to be productive with your team.
 2. Project Description: Together is a comprehensive application designed to streamline task management, foster collaboration, and facilitate idea sharing within teams. This project aims to develop an application to help users improve their productivity by providing a  platform for task assignment, deadline setting, and team communication.
@@ -9,3 +10,9 @@
     User Search: Users can easily search for their coworkers by name, department, or project involvement. This feature simplifies the process of connecting with colleagues.
     Invitations: Together offers the ability to send connection invitations to coworkers. Upon acceptance, users can access each other's task lists, collaborate on projects, and communicate seamlessly.
 
+
+![1](https://github.com/humairaneha/together/assets/66266178/87417bad-fa8a-4cf3-963a-8434337ef742)
+
+![2](https://github.com/humairaneha/together/assets/66266178/a85679e1-7498-483c-a2a3-ef88b5a7c21d)
+
+![3](https://github.com/humairaneha/together/assets/66266178/9a52b610-9efd-49ca-ba9a-4d7ad24d26ec)
